@@ -77,7 +77,7 @@ INSERT INTO Comments (bug_id, parent_id, author, comment)
 UPDATE Comments SET parent_id = 3 WHERE comment_id = 6;
 ```
 
-- 하지만 트레이서 노드를 삭제하는 작업은 복잡하고 비효율적이다.
+- 하지만 트리에서 노드를 삭제하는 작업은 복잡하고 비효율적이다.
 
 ```sql
 SELECT comment_id FROM Comments WHERE parent_id = 4; -- returns 5 and 6
